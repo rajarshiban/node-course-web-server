@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 
   res.render('home.hbs',{
   pageTitle: 'Home Page',
-  welcomeMessage: 'Welcome to my Website',
+  welcomeMessage: 'Welcome to my Website'
 });
   });
 
@@ -55,6 +55,14 @@ app.get('/about', (req, res) => {
      pageTitle: 'About Page',
    }); //renders the template from hbs view engine
   });
+
+  app.get('/Projects', (req, res) => {
+  //  res.send("About Page");
+     res.render('projects.hbs',{
+       pageTitle: 'Projects Page',
+       welcomeMessage: 'Welcome to Projects page'
+     }); //renders the template from hbs view engine
+    });
 
   app.get('/bad', (req, res) => {
   //  res.send("<h1>Hello Express!</h1>");
